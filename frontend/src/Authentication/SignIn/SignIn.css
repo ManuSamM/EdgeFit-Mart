@@ -1,0 +1,80 @@
+.sign-in-page {
+    background-color: #F5F9FA;
+    height: 649px;
+}
+
+.sign-in-card {
+    width: 600px;
+    border: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd;
+}
+
+.signin-header {
+    font-size: 60px;
+    color: #0080ff96;
+}
+
+.signin-underline {
+    width: 60px;
+    height: 10px;
+    background: #0080ff96;
+    border-radius: 9px;
+}
+
+input {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 480px;
+    height: 80px;
+    background: #eaeaea;
+    border-radius: 6px;
+    font-family: poppins;
+    font-size: 17px;
+    border: none;
+}
+
+input::placeholder {
+    padding-left: 10px;
+}
+
+.sign-button-blue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 59px;
+    color: #fff;
+    background-color: #0080ff96;
+    font-size: 19px;
+    font-weight: 700;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.1s ease;
+}
+
+.sign-button-blue:active {
+    transform: translateY(2px);
+}
+
+.sign-button-violet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 59px;
+    color: #fff;
+    background-color: blueviolet;
+    font-size: 19px;
+    font-weight: 700;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.1s ease;
+}
+
+.sign-button-violet:active {
+    transform: translateY(2px);
+}

@@ -1,0 +1,27 @@
+.categories {
+    height: 1350px;
+    background-color: rgba(245, 245, 245, 0.5);
+    padding-top: 85px;
+}
+
+.categories-subtext {
+    font-size: 22px;
+    line-height: 2;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.categories-card {
+    background-color: #adb5bd4e;
+    width: 360px;
+    height: 360px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 20px;
+    user-select: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.categories-heading {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 35px;
+}

@@ -1,0 +1,71 @@
+#navbar {
+    z-index: 1;
+    background-color: #adb5bd;
+    height: 96px;
+    position: fixed;
+    top: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#logo {
+    margin-right: 12px;
+    user-select: none;
+}
+
+#brandname {
+    font-weight: 600;
+    font-size: 35px;
+    color: rgba(0, 0, 0, 0.8);
+    user-select: none;
+}
+
+#navbar .nav-link {
+    text-decoration: none;
+    margin: 0 18px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+#navbar .nav-link:hover {
+    border-bottom: 2px solid white;
+}
+
+.search-container {
+    position: relative;
+    height: 35px;
+}
+
+.search-bar {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-right: 34px;
+    height: 35px;
+    background-color: white;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.icon-style {
+    font-size: 28px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.7);
+    transition: transform 0.2s ease;
+}
+
+.icon-style:active {
+    transform: translateY(2px);
+}
+
+section {
+    scroll-margin-top: 80px;
+}
