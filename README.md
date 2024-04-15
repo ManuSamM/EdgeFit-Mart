@@ -1,3 +1,7 @@
+This is my website, EdgeFit Mart. I have created this website using MongoDB, Express.js, Node.js, React, Bootstrap. This website solely focuses of fitness and supplement products. I have devoted a lot of time to make its UI good and currently integrating other left over functionalities that a typical ecommerce website has. 
+
+
+
 ![Screenshot (230)](https://github.com/ManuSamM/EdgeFit-Mart/assets/106385914/07e9cbec-f5ee-4df1-9576-c4ed1fd0780f)
 ![Screenshot (231)](https://github.com/ManuSamM/EdgeFit-Mart/assets/106385914/7aeae46b-d997-4945-b531-790517030672)
 ![Screenshot (232)](https://github.com/ManuSamM/EdgeFit-Mart/assets/106385914/2b2f777b-3da4-4537-bb34-47e11c078bd4)
