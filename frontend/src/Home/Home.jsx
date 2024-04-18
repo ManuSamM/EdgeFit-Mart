@@ -32,8 +32,6 @@ function Home() {
         }
     }, []);
 
-    
-    
     return (
         <>
             <Navbar setSearchTerm={setSearchTerm} handleSearchBarClick={handleSearchBarClick} />

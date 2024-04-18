@@ -67,7 +67,6 @@ function Products({ searchTerm, userId }) {
                     {filteredProducts.map(product => (
                         <li key={product._id}>
 
-
                             <div className="product-card bg-gradient rounded-3" >
                                 <Link to={`/product/${product._id}`} className="product-link">
                                     <img src={`http://localhost:5000/api/image/${encodeURIComponent(product.imagePath)}`}

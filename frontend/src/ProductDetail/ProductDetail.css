@@ -1,10 +1,12 @@
 .product-detail {
     padding-left: 50px;
     padding-right: 50px;
+    background-color: whitesmoke;
+    height: 621px;
 }
 
 .productdetail-img {
-    width: 420px;
+    width: 450px;
     height: 420px;
 }
 
@@ -14,7 +16,7 @@
 }
 
 .product-detail-left {
-    padding-top: 100px;
+    padding-top: 80px;
     padding-left: 90px;
 }
 
