@@ -11,9 +11,15 @@ function Footer() {
                     <p>Emergency: 91-9820466726</p>
                 </div>
                 <div className="social-icons">
-                    <Link to='https://www.facebook.com/' target='_blank'>  <i className="fa-brands fa-facebook fa-beat"></i></Link>
-                    <Link to='https://www.twitter.com' target='_blank'>  <i className="fa-brands fa-twitter fa-beat"></i></Link>
-                    <Link to='https://www.instagram.com/' target='_blank'>  <i className="fa-brands fa-instagram fa-beat"></i></Link>
+                    <Link to='https://www.facebook.com/' target='_blank'>
+                        <i className="fa-brands fa-facebook fa-beat"></i>
+                    </Link>
+                    <Link to='https://www.twitter.com' target='_blank'>
+                        <i className="fa-brands fa-twitter fa-beat"></i>
+                    </Link>
+                    <Link to='https://www.instagram.com/' target='_blank'>
+                        <i className="fa-brands fa-instagram fa-beat"></i>
+                    </Link>
                 </div>
             </div>
         </footer>

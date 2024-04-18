@@ -4,8 +4,8 @@ import { FaSearch } from 'react-icons/fa';
 import { FaShoppingCart } from "react-icons/fa";
 import { MdAccountCircle } from "react-icons/md";
 import { TiHeartFullOutline } from "react-icons/ti";
-import React from 'react';
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 function Navbar({ setSearchTerm, handleSearchBarClick }) {
 
@@ -40,8 +40,10 @@ function Navbar({ setSearchTerm, handleSearchBarClick }) {
                     <a href='#products' className='nav-link'>Products</a>
                     <a href='#contacts' className='nav-link'>Contacts</a>
                 </div>
-                <div className='search-container d-flex justify-content-start align-items-center w-25' onClick={handleSearchBarClick}>
-                    <input type="text" placeholder="Search" className='search-bar container rounded-4' onChange={handleSearchChange} />
+                <div className='search-container d-flex justify-content-start align-items-center w-25'
+                    onClick={handleSearchBarClick}>
+                    <input type="text" placeholder="Search" className='search-bar container rounded-4'
+                        onChange={handleSearchChange} />
                     <FaSearch className='search-icon' />
                 </div>
                 <div className='container w-25 d-flex justify-content-end align-items-center'>
@@ -54,4 +56,8 @@ function Navbar({ setSearchTerm, handleSearchBarClick }) {
     )
 }
 
+Navbar.propTypes = {
+    setSearchTerm: PropTypes.string.isRequired,
+    handleSearchBarClick: PropTypes.string.isRequired,
+}
 export default Navbar

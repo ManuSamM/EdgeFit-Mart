@@ -14,7 +14,10 @@ function Categories() {
             <div className="container-fluid">
                 <div className='d-flex justify-content-around align-items-center mb-5'>
                     <div id='supplements' className='categories-card'>
-                        <img src={supplements} height={360} width={360} onDragStart={handleDragStart}></img>
+                        <img src={supplements}
+                            height={360}
+                            width={360}
+                            onDragStart={handleDragStart}></img>
                     </div>
                     <div className='categories-subtext'>
                         <b className='categories-heading'>Supplements</b><br />

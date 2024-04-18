@@ -37,3 +37,8 @@
 .product-name {
     margin-top: 15px;
 }
+
+.product-link {
+    text-decoration: none;
+}
+

@@ -84,7 +84,9 @@ function SignUp() {
                                 />
                             </div>
                             <div className='mb-3 d-flex justify-content-center'>
-                                <button type="button" className="sign-button-blue mb-3" onClick={handleSignUp}>
+                                <button type="button"
+                                    className="sign-button-blue mb-3"
+                                    onClick={handleSignUp}>
                                     Sign Up
                                 </button>
                             </div>

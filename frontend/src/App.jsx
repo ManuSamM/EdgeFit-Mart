@@ -5,6 +5,7 @@ import SignUp from './Authentication/SignUp/SignUp'
 import Cart from './Cart/Cart'
 import Wishlist from './Wishlist/Wishlist'
 import { Route, Routes } from 'react-router-dom';
+import ProductDetail from './ProductDetail/ProductDetail'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/signup' Component={SignUp} />
         <Route path='/cart' Component={Cart} />
         <Route path='/wishlist' Component={Wishlist} />
+        <Route path="/product/:id" Component={ProductDetail} />
       </Routes>
     </>
   )

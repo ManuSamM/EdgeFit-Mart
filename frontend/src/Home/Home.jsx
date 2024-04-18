@@ -6,7 +6,7 @@ import Categories from '../Components/Categories/Categories'
 import Message from '../Components/Message/Message'
 import Products from '../Products/Products'
 import Footer from '../Components/Footer/Footer'
-import React, { useState, useRef ,useEffect} from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 function Home() {
 
@@ -31,6 +31,9 @@ function Home() {
             setUserId(storedUserId);
         }
     }, []);
+
+    
+    
     return (
         <>
             <Navbar setSearchTerm={setSearchTerm} handleSearchBarClick={handleSearchBarClick} />
@@ -47,7 +50,9 @@ function Home() {
                         </a>
                     </div>
                     <div className='d-flex align-items-center'>
-                        <img src={heroimage} height={570} className='hero-image pe-4 pb-5' onDragStart={handleDragStart}></img>
+                        <img src={heroimage} height={570}
+                            className='hero-image pe-4 pb-5'
+                            onDragStart={handleDragStart}></img>
                     </div>
                 </div>
             </section>
@@ -61,7 +66,8 @@ function Home() {
             </section>
 
             <section id='products'>
-                <Products searchTerm={searchTerm} ref={productsRef} userId={userId}  />
+                <Products searchTerm={searchTerm}
+                    ref={productsRef} userId={userId} />
             </section>
 
             <section id='contacts'>

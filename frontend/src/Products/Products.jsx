@@ -1,7 +1,8 @@
-/* eslint-disable react/prop-types */
 import './Products.css'
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 function Products({ searchTerm, userId }) {
 
@@ -12,7 +13,6 @@ function Products({ searchTerm, userId }) {
 
     //display products from database
     const [products, setProducts] = useState([]);
-
     useEffect(() => {
         // Fetch products from the API
         axios.get('http://localhost:5000/api/products')
@@ -22,9 +22,7 @@ function Products({ searchTerm, userId }) {
 
     //logic for favourite icon
     const [favoriteStatus, setFavoriteStatus] = useState({});
-
     const handleIconClick = (productId) => {
-
         setFavoriteStatus(prevStatus => ({
             ...prevStatus,
             [productId]: !prevStatus[productId]
@@ -68,12 +66,19 @@ function Products({ searchTerm, userId }) {
                 <ul style={{ listStyle: 'none' }} className='d-flex flex-wrap justify-content-evenly p-0 m-0'>
                     {filteredProducts.map(product => (
                         <li key={product._id}>
-                            <div className="product-card bg-gradient rounded-3">
-                                <img src={`http://localhost:5000/api/image/${encodeURIComponent(product.imagePath)}`}
-                                    alt={product.name} className='product-image rounded-top-3' onDragStart={handleDragStart} />
+
+
+                            <div className="product-card bg-gradient rounded-3" >
+                                <Link to={`/product/${product._id}`} className="product-link">
+                                    <img src={`http://localhost:5000/api/image/${encodeURIComponent(product.imagePath)}`}
+                                        alt={product.name}
+                                        className='product-image rounded-top-3'
+                                        onDragStart={handleDragStart} />
+                                </Link>
                                 <i
                                     className={`fa ${favoriteStatus[product._id] ? 'fa-solid' : 'fa-regular'} fa-star fa-xl favourite`}
-                                    onClick={() => handleIconClick(product._id)} style={{ color: 'orange' }} ></i>
+                                    onClick={() => handleIconClick(product._id)}
+                                    style={{ color: 'orange' }} ></i>
                                 <div className='d-flex justify-content-between align-items-center ps-3 pe-3'>
                                     <div>
                                         <h6 className='product-name'><b>{product.name}</b></h6>
@@ -89,4 +94,10 @@ function Products({ searchTerm, userId }) {
         </>
     )
 }
+
+Products.propTypes = {
+    searchTerm: PropTypes.string.isRequired, // Validate searchTerm as a required string
+    userId: PropTypes.string.isRequired, // Validate userId as a required string
+};
+
 export default Products
