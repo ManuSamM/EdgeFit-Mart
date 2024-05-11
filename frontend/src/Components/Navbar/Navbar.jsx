@@ -1,11 +1,11 @@
-import './Navbar.css'
+import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import muscle from '../../assets/muscle.png'
 import { FaSearch } from 'react-icons/fa';
 import { FaShoppingCart } from "react-icons/fa";
 import { MdAccountCircle } from "react-icons/md";
 import { TiHeartFullOutline } from "react-icons/ti";
-import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
+import './Navbar.css'
 
 function Navbar({ setSearchTerm, handleSearchBarClick }) {
 

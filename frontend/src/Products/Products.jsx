@@ -1,8 +1,8 @@
-import './Products.css'
 import { useEffect, useState, useRef } from 'react';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import PropTypes from 'prop-types';
+import './Products.css'
 
 function Products({ searchTerm, userId }) {
 
@@ -61,12 +61,13 @@ function Products({ searchTerm, userId }) {
         <>
             <div className="products" ref={productsRef}>
 
-                <div className="products-text container d-flex justify-content-center">Our Products</div>
+                <div className="products-text container d-flex justify-content-center">
+                    Our Products
+                </div>
 
                 <ul style={{ listStyle: 'none' }} className='d-flex flex-wrap justify-content-evenly p-0 m-0'>
                     {filteredProducts.map(product => (
                         <li key={product._id}>
-
                             <div className="product-card bg-gradient rounded-3" >
                                 <Link to={`/product/${product._id}`} className="product-link">
                                     <img src={`http://localhost:5000/api/image/${encodeURIComponent(product.imagePath)}`}
@@ -75,7 +76,8 @@ function Products({ searchTerm, userId }) {
                                         onDragStart={handleDragStart} />
                                 </Link>
                                 <i
-                                    className={`fa ${favoriteStatus[product._id] ? 'fa-solid' : 'fa-regular'} fa-star fa-xl favourite`}
+                                    className={`fa ${favoriteStatus[product._id] ? 'fa-solid' : 'fa-regular'} 
+                                    fa-star fa-xl favourite`}
                                     onClick={() => handleIconClick(product._id)}
                                     style={{ color: 'orange' }} ></i>
                                 <div className='d-flex justify-content-between align-items-center ps-3 pe-3'>

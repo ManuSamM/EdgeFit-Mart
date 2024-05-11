@@ -1,12 +1,11 @@
-import './Home.css'
-import '../bootstrap-5.3.2-dist/css/bootstrap.min.css'
+import { useState, useRef, useEffect } from 'react';
 import heroimage from '../assets/fit-people.png'
 import Navbar from '../Components/Navbar/Navbar'
 import Categories from '../Components/Categories/Categories'
-import Message from '../Components/Message/Message'
 import Products from '../Products/Products'
 import Footer from '../Components/Footer/Footer'
-import { useState, useRef, useEffect } from 'react';
+import '../bootstrap-5.3.2-dist/css/bootstrap.min.css'
+import './Home.css'
 
 function Home() {
 
@@ -57,10 +56,6 @@ function Home() {
 
             <section id='categories'>
                 <Categories />
-            </section>
-
-            <section id="message">
-                <Message />
             </section>
 
             <section id='products'>

@@ -33,14 +33,14 @@ const ProductDetail = () => {
                 <>
                     <div className="product-detail row">
                         <div className='product-detail-left col-md-6'>
-                            <img className='productdetail-img'
+                            <img className='productdetail-img rounded-2'
                                 src={`http://localhost:5000/api/image/${encodeURIComponent(product.imagePath)}`}
                                 alt={product.name} />
                         </div>
                         <div className='product-detail-right col-md-6'>
                             <h1 className='productdetail-name'><b>{product.name}</b></h1>
                             <br />
-                            <h2><b>Price:</b> Rs. {product.price}</h2>
+                            <h3><b>Price:</b> Rs {product.price}</h3>
                             <br /><br /><br />
                             <p><b>Description:</b><br/><br/>{product.description}</p>
                             <br /><br />

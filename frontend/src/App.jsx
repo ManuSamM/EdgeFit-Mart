@@ -1,11 +1,11 @@
-import './index.css'
+import { Route, Routes } from 'react-router-dom';
 import Home from './Home/Home'
 import SignIn from './Authentication/SignIn/SignIn'
 import SignUp from './Authentication/SignUp/SignUp'
 import Cart from './Cart/Cart'
 import Wishlist from './Wishlist/Wishlist'
-import { Route, Routes } from 'react-router-dom';
 import ProductDetail from './ProductDetail/ProductDetail'
+import './index.css'
 
 function App() {
   return (

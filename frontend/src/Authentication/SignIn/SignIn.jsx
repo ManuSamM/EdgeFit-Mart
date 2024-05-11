@@ -1,7 +1,7 @@
-import './SignIn.css'
-import Navbar from '../../Components/Navbar/Navbar'
 import  { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom'
+import Navbar from '../../Components/Navbar/Navbar'
+import './SignIn.css'
 
 function SignIn() {
 

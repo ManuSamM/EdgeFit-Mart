@@ -1,7 +1,7 @@
-import './Categories.css'
 import supplements from '../../assets/supplements.jpg'
 import equipments from '../../assets/equipments.jpg'
 import sportswear from '../../assets/sportswear.jpg'
+import './Categories.css'
 
 function Categories() {
 
