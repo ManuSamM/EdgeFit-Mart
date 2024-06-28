@@ -1,7 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
-import dotenv from 'dotenv';
+import cookieParser from 'cookie-parser';
 import productRouter from './routes/productRoutes.js';
 import signUpRouter from './routes/signUpRoutes.js';
 import signInRouter from './routes/signInRoutes.js'
@@ -11,7 +11,13 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:5173', // Adjust to your frontend's URL
+    credentials: true, // Allow credentials (cookies) to be included in requests
+}));
+
+app.use(cookieParser());
 
 mongoose.connect('mongodb://127.0.0.1:27017/products');
 
