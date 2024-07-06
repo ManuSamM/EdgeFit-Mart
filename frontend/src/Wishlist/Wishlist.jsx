@@ -5,8 +5,8 @@ function Wishlist() {
     return (
         <>
             <Navbar />
-            <div className='wishlist'>
-                This will be the wishlist
+            <div className="wishlist-header">
+                <p>My Wishlist</p>
             </div>
         </>
     )

@@ -34,7 +34,7 @@ function Navbar({ setSearchTerm, handleSearchBarClick }) {
                         EdgeFit Mart
                     </div>
                 </div>
-                <div className="container w-50 d-flex justify-content-evenly align-items-center">
+                <div className="container w-50 d-flex justify-content-start align-items-center">
                     <Link to="/" className='nav-link' onClick={handleHomeClick}>Home</Link>
                     <a href='#categories' className='nav-link'>Categories</a>
                     <a href='#products' className='nav-link'>Products</a>
@@ -47,9 +47,9 @@ function Navbar({ setSearchTerm, handleSearchBarClick }) {
                     <FaSearch className='search-icon' />
                 </div>
                 <div className='container w-25 d-flex justify-content-end align-items-center'>
-                    <Link to='/cart'> <FaShoppingCart className='me-4 icon-style' /></Link>
+                    <Link to='/signin'><MdAccountCircle className='me-4 icon-style' /></Link>
                     <Link to='/wishlist'><TiHeartFullOutline className='me-4 icon-style' /></Link>
-                    <Link to='/signin'><MdAccountCircle className='me-2 icon-style' /></Link>
+                    <Link to='/cart'> <FaShoppingCart className='me-2 icon-style' /></Link>
                 </div>
             </nav>
         </>

@@ -5,8 +5,8 @@ function Cart() {
     return (
         <>
             <Navbar />
-            <div className="cart">
-                This will be the cart
+            <div className="cart-header">
+                <p>Cart Section</p>
             </div>
         </>
     )

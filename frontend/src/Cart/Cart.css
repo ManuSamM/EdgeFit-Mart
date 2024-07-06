@@ -1,0 +1,13 @@
+.cart-header {
+    margin-top: 0.5em;
+    margin-left: 1em;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.cart-header p {
+    background: linear-gradient(dodgerblue, blue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

@@ -3,10 +3,16 @@
     padding-right: 50px;
     height: 621px;
     background-color: #F5F9FA;
-
 }
 
-.productdetail-img {
+.product-detail-name{
+    background: linear-gradient(black, blue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.product-detail-img {
     width: 450px;
     height: 420px;
 }

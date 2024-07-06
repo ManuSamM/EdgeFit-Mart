@@ -3,47 +3,76 @@ import { Link, useNavigate } from 'react-router-dom'
 import Navbar from '../../Components/Navbar/Navbar'
 import './SignIn.css'
 
-function SignIn() {
+function SignIn({setUser}) {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
+    // const handleSignIn = async () => {
+    //     try {
+    //         const response = await fetch('http://localhost:5000/api/signin', {
+    //             method: 'POST',
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //             },
+    //             body: JSON.stringify({
+    //                 email,
+    //                 password,
+    //             }),
+    //         });
+
+    //         if (response.ok) {
+    //             const { token, user } = await response.json();
+    //             setUser(user); //added
+    //             const userId = user._id;
+
+    //             // Save the token in localStorage or sessionStorage
+    //             localStorage.setItem('token', token);
+    //             localStorage.setItem('userId', userId); // Store the userId in localStorage
+                
+    //             console.log('Sign-in successful');
+    //             setEmail('');
+    //             setPassword('');
+    //             navigate('/');
+
+    //         } else {
+    //             alert('Please check if the email and password are correct');
+    //             console.error('Sign-in failed');
+    //         }
+    //     } catch (error) {
+    //         console.error('Error during sign-in:', error);
+    //     }
+    // };
     const handleSignIn = async () => {
         try {
-            const response = await fetch('http://localhost:5000/api/signin', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    email,
-                    password,
-                }),
-            });
-
-            if (response.ok) {
-                const { token, user } = await response.json();
-                const userId = user._id;
-
-                // Save the token in localStorage or sessionStorage
-                localStorage.setItem('token', token);
-                localStorage.setItem('userId', userId); // Store the userId in localStorage
-                
-                console.log('Sign-in successful');
-                setEmail('');
-                setPassword('');
-                navigate('/');
-
-            } else {
-                alert('Please check if the email and password are correct');
-                console.error('Sign-in failed');
-            }
+          const response = await fetch('http://localhost:5000/api/signin', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              email,
+              password,
+            }),
+            credentials: 'include', // Include credentials (cookies) in the request
+          });
+    
+          if (response.ok) {
+            const { user } = await response.json();
+            setUser(user); // Set the user state
+            console.log('Sign-in successful');
+            setEmail('');
+            setPassword('');
+            navigate('/');
+          } else {
+            alert('Please check if the email and password are correct');
+            console.error('Sign-in failed');
+          }
         } catch (error) {
-            console.error('Error during sign-in:', error);
+          console.error('Error during sign-in:', error);
         }
-    };
-
+      };
     return (
         <>
             <Navbar />

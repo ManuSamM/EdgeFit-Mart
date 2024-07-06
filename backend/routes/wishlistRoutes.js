@@ -1,11 +1,9 @@
 import express from 'express';
-import { addToWishlist } from '../controllers/wishlistController.js';
+import { addToWishlist, removeFromWishlist } from '../controllers/wishlistController.js';
 
 const router = express.Router();
 
-// POST route to add a product to the wishlist
-// router.post('/:userId/add', addToWishlist);
-
 router.post('/user/:userId/wishlist/add', addToWishlist);
+router.delete('/user/:userId/wishlist/remove', removeFromWishlist);
 
 export default router;

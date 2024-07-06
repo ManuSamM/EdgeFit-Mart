@@ -33,12 +33,12 @@ const ProductDetail = () => {
                 <>
                     <div className="product-detail row">
                         <div className='product-detail-left col-md-6'>
-                            <img className='productdetail-img rounded-2'
+                            <img className='product-detail-img rounded-2'
                                 src={`http://localhost:5000/api/image/${encodeURIComponent(product.imagePath)}`}
                                 alt={product.name} />
                         </div>
                         <div className='product-detail-right col-md-6'>
-                            <h1 className='productdetail-name'><b>{product.name}</b></h1>
+                            <h1 className='product-detail-name'><b>{product.name}</b></h1>
                             <br />
                             <h3><b>Price:</b> Rs {product.price}</h3>
                             <br /><br /><br />
